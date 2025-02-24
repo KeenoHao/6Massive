@@ -32,7 +32,7 @@ The IPv6 active address probed by 6Massive is published on [IPv6 Active Address 
 
 Multiple seed address sets of the same scale can be obtained through expansion strategy.
 
-The -S parameter is the seed address source, such as Hitlist. The -num parameter is the number of seed address sets. -Size is the size of the seed address set, that is, the number of seed addresses contained. -prefix is the prefix of the file name of the seed address set.
+The -S parameter is the seed address source, such as Hitlist. The -num parameter is the number of seed address sets. -size is the size of the seed address set, that is, the number of seed addresses contained. -prefix is the prefix of the file name of the seed address set.
 
    ```
    ./6Massive -o expand -S hitlist_2024_07_20 -num 10 -size 100000 -prefix random100K
