@@ -77,7 +77,7 @@ func main() {
 		//Command:
 		//sudo zmap --probe-module=icmp6_echoscan --ipv6-target-file=targetAddress  --output-file=activeAddress --ipv6-source-ip=2001::1(Host IP)   --bandwidth=30M --cooldown-time=4
 	case "convert":
-		// ./6Massive -o convert -s random100K1 -t targetAddress -h highDimPattern
+		// ./6Massive -o convert -a activeAddress -t targetAddress
 		// Before executing the feedback strategy, format the IPv6 active addresses scanned
 		convertIPv6toFull(activeAddressFile, targetAddressFile)
 	case "feedback":
