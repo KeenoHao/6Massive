@@ -408,7 +408,7 @@ func generateTargetAddress(patternFile []string, targetFile string) {
 	countLowPattern := len(patternFile)
 	var countAddress float64
 	for _, pattern := range patternFile {
-		println("Current remaining unfiltered prefixes: ", countLowPattern)
+		println("Current remaining low-dimensional patterns: ", countLowPattern)
 		countLowPattern--
 		addresses := expandWildcard(pattern)
 		for _, ip := range addresses {
