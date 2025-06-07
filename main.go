@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"strconv"
+	"strings"
 )
 
 var (
@@ -103,6 +104,22 @@ func main() {
 			fmt.Println("Error:", err)
 			return
 		}
+	case "extremeExpansion":
+		//./6Massive -o expand -S random1M1_random1M2_random1M3_random1M4_random1M5_random1M6_random1M7_random1M8_random1M9_random1M10 -t targetAddress
+		var lowDimPatterns []string
+		if strings.Contains(seedSetFile, "_") {
+			subStrings := strings.Split(seedSetFile, "_")
+			for _, str := range subStrings {
+				curLowDimPatterns, _, _ := MDHC(str)
+				lowDimPatterns = append(lowDimPatterns, curLowDimPatterns...)
+			}
+		} else {
+			lowDimPatterns, _, _ = MDHC(seedSetFile)
+		}
+		filter = New()
+		lowDimPatterns = removeDuplicates(lowDimPatterns)
+		//Generate IPv6 target addresses in the low-dimensional pattern space
+		generateTargetAddress(lowDimPatterns, targetAddressFile)
 	default:
 		// If the operation type is invalid
 		fmt.Println("Invalid operation. Please use 'MDHC', 'convert', 'feedback', or 'expand'.")

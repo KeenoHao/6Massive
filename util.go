@@ -364,3 +364,20 @@ func formateIP(originFile, targetFile string) {
 	writer.Flush()
 	fmt.Println("总数量:", count)
 }
+
+func removeDuplicates(strArr []string) []string {
+	// 使用 map 来存储唯一的字符串
+	uniqueMap := make(map[string]struct{})
+	var result []string
+
+	// 遍历字符串数组
+	for _, str := range strArr {
+		// 如果 str 不在 map 中，则添加到结果切片和 map 中
+		if _, exists := uniqueMap[str]; !exists {
+			uniqueMap[str] = struct{}{}
+			result = append(result, str)
+		}
+	}
+
+	return result
+}
