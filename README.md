@@ -51,10 +51,10 @@ The -s parameter represents the seed address set of the input, the -t parameter 
 
 ### Probe
 
-Under a 30Mbps bandwidth, utilize the asynchronous scanning tool [ZMap](https://github.com/tumi8/zmap) to scan IPv6 target addresses and collect responsive IPv6 active addresses.
+Based on actual bandwidth, utilize the asynchronous scanning tool [ZMap](https://github.com/tumi8/zmap) to scan IPv6 target addresses and collect responsive IPv6 active addresses.
 
    ```
-   sudo zmap --probe-module=icmp6_echoscan --ipv6-target-file=targetAddressFile  --output-file=activeAddressFile --ipv6-source-ip=(Machine IPv6 address) --bandwidth=30M --cooldown-time=4
+   sudo zmap --probe-module=icmp6_echoscan --ipv6-target-file=targetAddressFile  --output-file=activeAddressFile --ipv6-source-ip=(Machine IPv6 address) --bandwidth=10M(Actual bandwidth) --cooldown-time=4
    ```
 
 ### Feedback Strategy Based on Pattern Space Intersection.
