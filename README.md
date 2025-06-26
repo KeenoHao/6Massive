@@ -77,6 +77,12 @@ The -a parameter is the active address after formatting, -h is the high-dimensio
    ./6Massive -o feedback -a activeAddress -h highDimPattern5 -p 5 -t targetAddress
    ```
 
+### Sampling-based IPv6 Seed Address Expansion Strategy.
+
+Execute the Sampling-based IPv6 seed address expansion strategy to generate more target addresses.
+```
+./6Massive -o extremeExpansion -S random1M1_random1M2_random1M3_random1M4_random1M5_random1M6_random1M7_random1M8_random1M9_random1M10 -t targetAddress
+```
 
 
 
