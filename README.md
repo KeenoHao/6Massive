@@ -1,9 +1,5 @@
 # 6Massive
-6Massive is an efficient IPv6 large-scale target generation framework. Its idea is introduced in the paper "6Massive: An Efficient IPv6 Large-Scale Target Generation Framework". 6Massive can predict 1.644 billion IPv6 active addresses in 1.76 days.
-
-## IPv6 Active Address List
-The IPv6 active address probed by 6Massive is published on [IPv6 Active Address List](https://github.com/KeenoHao/IPv6_Active_Address_List.git).
-
+This repository provides the source code of 6Massive, a large-scale target generation algorithm. The design and methodology of 6Massive are comprehensively presented in our INFOCOM 2026 paper "6Massive: An Efficient IPv6 Large-Scale Target Generation Framework". 6Massive can predict 1.644 billion IPv6 active addresses in 1.76 days.
 
 
 ## Execution steps
